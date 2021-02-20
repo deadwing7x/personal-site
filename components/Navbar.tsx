@@ -1,6 +1,14 @@
 import styles from "../styles/Navbar.module.css";
 
 const Navbar: React.FC<{}> = () => {
+  const scrollToComponent = (component: string) => {
+    document.getElementById(component)?.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+      inline: "nearest",
+    });
+  };
+
   return (
     <nav className={`pt-6 ${styles.header}`}>
       <div tabIndex={-1} className={styles.logo}>
@@ -11,17 +19,26 @@ const Navbar: React.FC<{}> = () => {
       <div className={styles.navlinks_div}>
         <ol className={`text-gray-50 ${styles.nav_links}`}>
           <li className="mx-6">
-            <a className={styles.li_text} href="#about">
+            <a
+              className={styles.li_text}
+              onClick={() => scrollToComponent("aboutme")}
+            >
               About
             </a>
           </li>
           <li className="mx-6">
-            <a className={styles.li_text} href="#projects">
+            <a
+              className={styles.li_text}
+              onClick={() => scrollToComponent("projects")}
+            >
               Projects
             </a>
           </li>
           <li className="mx-6">
-            <a className={styles.li_text} href="#contact">
+            <a
+              className={styles.li_text}
+              onClick={() => scrollToComponent("contactme")}
+            >
               Contact
             </a>
           </li>

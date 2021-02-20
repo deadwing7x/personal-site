@@ -2,7 +2,7 @@ import React from "react";
 import "tailwindcss/tailwind.css";
 import { GetStaticProps, InferGetStaticPropsType } from "next";
 import axios from "axios";
-import Head from 'next/head';
+import Head from "next/head";
 
 import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
@@ -10,6 +10,9 @@ import { IUser } from "../models/IUser";
 import UserContext from "../context/UserContext";
 import { IRepo } from "../models/IRepo";
 import ReposContext from "../context/RepoContext";
+import AboutMe from "../components/AboutMe";
+import Projects from "../components/Projects";
+import ContactMe from "../components/ContactMe";
 
 const fetchUser = async () =>
   await axios
@@ -56,10 +59,23 @@ const Home = ({
             name="viewport"
             content="initial-scale=1.0, width=device-width"
           />
+          <script
+            src="https://kit.fontawesome.com/35ac73bd6b.js"
+            crossOrigin="anonymous"
+          ></script>
+          <link
+            rel="stylesheet"
+            href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"
+            integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu"
+            crossOrigin="anonymous"
+          ></link>
         </Head>
         <div className="container mx-auto">
           <Navbar />
           <Hero />
+          <AboutMe />
+          <Projects />
+          <ContactMe />
         </div>
       </ReposContext.Provider>
     </UserContext.Provider>

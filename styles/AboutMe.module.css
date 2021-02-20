@@ -1,0 +1,22 @@
+.aboutMeDiv {
+  font-family: "Space Mono", "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono",
+    monospace;
+}
+
+.aboutMeText {
+  border-bottom: 2px solid #1ee0e0;
+  width: max-content;
+}
+
+.socialMedia {
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-box-align: center;
+  align-items: center;
+  background: #8a8888;
+  width: max-content;
+}
+
+.socialMedia > li {
+  padding: 6px;
+}

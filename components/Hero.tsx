@@ -13,9 +13,7 @@ const Hero = () => {
           {user?.users?.name}
         </p>
         <p className={`pt-6 w-12/12 ${styles.description}`}>
-          Hi 👋, I am a full-stack developer based out of Mumbai, IN. I am
-          currently focused on full-stack development using .NET with C# and
-          React with TypeScript.
+          {user?.users?.bio}
         </p>
         <a href="mailto:anubhavsarkar7@gmail.com" className={`mt-8 ${styles.email_link}`}>Get In Touch</a>
       </div>

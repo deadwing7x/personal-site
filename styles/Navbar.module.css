@@ -38,6 +38,7 @@
 
 .li_text {
   padding: 5px;
+  cursor: pointer;
 }
 
 .li_text:hover {
