@@ -37,9 +37,9 @@ const Navbar: React.FC<{}> = () => {
           <li className="mx-6">
             <a
               className={styles.li_text}
-              onClick={() => scrollToComponent("contactme")}
+              onClick={() => scrollToComponent("experience")}
             >
-              Contact
+              Work Experience
             </a>
           </li>
         </ol>

@@ -12,7 +12,9 @@ import { IRepo } from "../models/IRepo";
 import ReposContext from "../context/RepoContext";
 import AboutMe from "../components/AboutMe";
 import Projects from "../components/Projects";
-import ContactMe from "../components/ContactMe";
+import Experience from "../components/Experience";
+import Footer from "../components/Footer";
+import ScrollToTop from "../components/ScrollToTop";
 
 const fetchUser = async () =>
   await axios
@@ -75,7 +77,9 @@ const Home = ({
           <Hero />
           <AboutMe />
           <Projects />
-          <ContactMe />
+          <Experience />
+          <ScrollToTop />
+          <Footer />
         </div>
       </ReposContext.Provider>
     </UserContext.Provider>
