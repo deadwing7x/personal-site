@@ -1,0 +1,46 @@
+.header {
+  display: flex;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  color: rgb(244, 244, 244);
+  font-family: "Space Mono", "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono",
+    monospace;
+  z-index: 12;
+}
+
+.logo {
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.navlinks_div {
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+}
+
+.nav_links {
+  display: flex;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  align-items: center;
+  list-style: bengali;
+}
+
+.li_text {
+  padding: 5px;
+}
+
+.li_text:hover {
+  color: #1ee0e0;
+  transition: ease-in-out 200ms;
+}
