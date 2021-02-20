@@ -6,13 +6,13 @@ const Hero = () => {
   const user: any = useContext(UserContext);
 
   return (
-    <section className={`ml-20 mr-20 mt-16 ${styles.grid}`}>
+    <section className={`ml-24 mr-20 mt-16 ${styles.grid}`}>
       <div className={styles.leftContainer}>
         <p className={`text-2xl ${styles.welcomeText}`}>Welcome I'm</p>
         <p className="pt-6 text-8xl text-gray-50 font-extrabold w-40">
           {user?.users?.name}
         </p>
-        <p className={`pt-6 w-11/12 ${styles.description}`}>
+        <p className={`pt-6 w-12/12 ${styles.description}`}>
           Hi 👋, I am a full-stack developer based out of Mumbai, IN. I am
           currently focused on full-stack development using .NET with C# and
           React with TypeScript.
