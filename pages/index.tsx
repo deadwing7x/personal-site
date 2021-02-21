@@ -56,7 +56,7 @@ const Home = ({
     <UserContext.Provider value={user}>
       <ReposContext.Provider value={repos}>
         <Head>
-          <title>deadwing7x</title>
+          <title>anubhav7x</title>
           <meta
             name="viewport"
             content="initial-scale=1.0, width=device-width"

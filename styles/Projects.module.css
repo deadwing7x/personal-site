@@ -40,6 +40,7 @@
 .projectInner:hover {
   border: 2px solid #1ee0e0;
   transition: ease-in-out 400ms;
+  bottom: 0.5rem;
 }
 
 .projectTop {

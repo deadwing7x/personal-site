@@ -12,7 +12,7 @@ const Hero = () => {
         <p className="pt-6 text-8xl text-gray-50 font-extrabold w-40">
           {user?.users?.name}
         </p>
-        <p className={`pt-6 w-12/12 ${styles.description}`}>
+        <p className={`pt-6 w-full ${styles.description}`}>
           {user?.users?.bio}
         </p>
         <a href="mailto:anubhavsarkar7@gmail.com" className={`mt-8 ${styles.email_link}`}>Get In Touch</a>
