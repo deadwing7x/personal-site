@@ -16,13 +16,20 @@ const Navbar: React.FC<{}> = () => {
   const [windowDimensions, setWindowDimensions] = useState<any>(
     getWindowDimensions()
   );
+  const [isOpen, setIsOpen] = useState<boolean>(false);
 
   const scrollToComponent = (component: string) => {
+    setIsOpen(!isOpen);
+
     document.getElementById(component)?.scrollIntoView({
       behavior: "smooth",
       block: "start",
       inline: "nearest",
     });
+  };
+
+  const showNav = () => {
+    setIsOpen(!isOpen);
   };
 
   useEffect(() => {
@@ -32,7 +39,7 @@ const Navbar: React.FC<{}> = () => {
 
     window.addEventListener("resize", handleResize);
 
-    if (windowDimensions.width < 450) {
+    if (windowDimensions.width <= 768) {
       setIsMobile(true);
     } else {
       setIsMobile(false);
@@ -48,36 +55,82 @@ const Navbar: React.FC<{}> = () => {
           Home
         </a>
       </div>
-      <div
-        className={isMobile ? styles.navlinks_div_mobile : styles.navlinks_div}
-      >
-        <ol className={`text-gray-50 ${styles.nav_links}`}>
-          <li className="mx-6">
-            <a
-              className={styles.li_text}
-              onClick={() => scrollToComponent("aboutme")}
+      {isMobile ? (
+        <>
+          <span role="button" className={styles.navButton} onClick={showNav}>
+            <i
+              className={isOpen ? "fas fa-times fa-2x" : "fas fa-bars fa-2x"}
+            ></i>
+          </span>
+          {isOpen ? (
+            <aside
+              aria-hidden={isOpen}
+              tabIndex={isOpen ? 1 : -1}
+              className={styles.asideDiv}
             >
-              About
-            </a>
-          </li>
-          <li className="mx-6">
-            <a
-              className={styles.li_text}
-              onClick={() => scrollToComponent("projects")}
-            >
-              Projects
-            </a>
-          </li>
-          <li className="mx-6">
-            <a
-              className={styles.li_text}
-              onClick={() => scrollToComponent("experience")}
-            >
-              Work Experience
-            </a>
-          </li>
-        </ol>
-      </div>
+              <nav>
+                <ol className={styles.navList}>
+                  <li>
+                    <a
+                      className={styles.li_text}
+                      onClick={() => scrollToComponent("aboutme")}
+                    >
+                      About
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      className={styles.li_text}
+                      onClick={() => scrollToComponent("projects")}
+                    >
+                      Projects
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      className={styles.li_text}
+                      onClick={() => scrollToComponent("experience")}
+                    >
+                      Work Experience
+                    </a>
+                  </li>
+                </ol>
+              </nav>
+            </aside>
+          ) : (
+            ""
+          )}
+        </>
+      ) : (
+        <div className={`${styles.navlinks_div}`}>
+          <ol className={`text-gray-50 ${styles.nav_links}`}>
+            <li className="mx-6">
+              <a
+                className={styles.li_text}
+                onClick={() => scrollToComponent("aboutme")}
+              >
+                About
+              </a>
+            </li>
+            <li className="mx-6">
+              <a
+                className={styles.li_text}
+                onClick={() => scrollToComponent("projects")}
+              >
+                Projects
+              </a>
+            </li>
+            <li className="mx-6">
+              <a
+                className={styles.li_text}
+                onClick={() => scrollToComponent("experience")}
+              >
+                Work Experience
+              </a>
+            </li>
+          </ol>
+        </div>
+      )}
     </nav>
   );
 };

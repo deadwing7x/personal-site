@@ -2,20 +2,32 @@ import styles from "../styles/AboutMe.module.css";
 
 const AboutMe = () => {
   return (
-    <section className={`lg:mt-20 lg:ml-24 lg:mr-24 sm:ml-20 sm:mr-16 sm:mt-14 ${styles.aboutMeDiv}`} id="aboutme">
-      <p className={`lg:pt-10 text-gray-50 lg:text-5xl pb-4 sm:text-3xl ${styles.aboutMeText}`}>
-        <span className={`lg:text-3xl sm:text-xl ${styles.number}`} style={{ color: "#1ee0e0" }}>
+    <section
+      className={`lg:mt-20 lg:ml-24 lg:mr-24 sm:ml-20 sm:mr-16 sm:mt-14 ${styles.aboutMeDiv}`}
+      id="aboutme"
+    >
+      <p
+        className={`lg:pt-10 text-gray-50 lg:text-5xl pb-4 sm:text-3xl ${styles.aboutMeText}`}
+      >
+        <span
+          className={`lg:text-3xl sm:text-xl ${styles.number}`}
+          style={{ color: "#1ee0e0" }}
+        >
           01.
         </span>{" "}
         About Me
       </p>
-      <p className="text-gray-50 pt-10 lg:text-xl sm:text-lg">Hi 👋, I'm Anubhav Sarkar.</p>
+      <p className="text-gray-50 pt-10 lg:text-xl sm:text-lg">
+        Hi 👋, I'm Anubhav Sarkar.
+      </p>
       <p className="text-gray-50 pt-4 lg:text-xl sm:text-lg">
         I am a full-stack developer based out of Mumbai, IN. I am currently
         focused on full-stack development using .NET with C# and React with
         TypeScript.
       </p>
-      <p className="text-gray-50 pt-12 lg:text-3xl sm:text-xl">Connect with me:</p>
+      <p className="text-gray-50 pt-12 lg:text-3xl sm:text-xl">
+        Connect with me:
+      </p>
       <ol className={`mt-5 ${styles.socialMedia}`}>
         <li>
           <a
@@ -23,12 +35,13 @@ const AboutMe = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <i className="fab fa-linkedin-in fa-2x"></i>
+            <i aria-hidden className="fab fa-linkedin-in fa-2x"></i>
           </a>
         </li>
         <li>
           <a href="https://github.com/deadwing7x">
             <i
+              aria-hidden
               className="fab fa-github fa-2x"
               title="deadwing7x's GitHub Profile"
             ></i>
