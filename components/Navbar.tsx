@@ -59,7 +59,7 @@ const Navbar: React.FC<{}> = () => {
   }, [windowDimensions]);
 
   return (
-    <nav className={`pt-6 ${styles.header}`}>
+    <nav id="navHeader" className={`pt-6 ${styles.header}`}>
       <div tabIndex={-1} className={styles.logo}>
         <a className="text-xl text-gray-50" href="/" aria-label="Home">
           Home

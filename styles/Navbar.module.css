@@ -6,7 +6,7 @@
   align-items: center;
   position: relative;
   width: 100%;
-  color: rgb(244, 244, 244);
+  color: #f4f4f4;
   font-family: "Space Mono", "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono",
     monospace;
   z-index: 12;
@@ -76,11 +76,12 @@
     align-items: center;
     position: fixed;
     top: 0px;
-    background: black;
+    background: #11111133;
+    backdrop-filter: blur(8px);
     bottom: 0px;
     right: 0px;
     padding: 50px 10px;
-    width: min(75vw, 400px);
+    width: 75vw;
     height: 100vh;
     outline: 0px;
     box-shadow: rgb(2 12 27 / 70%) 0px 10px 30px -10px;
@@ -112,12 +113,12 @@
     transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
     cursor: pointer;
     width: 100%;
-    font-size: 1.5rem;
+    font-size: 2.2rem;
     padding: 3px 20px 20px;
   }
 
   .navList > li::marker {
-    font-size: 1rem;
+    font-size: 1.3rem;
   }
 }
 
@@ -140,11 +141,12 @@
     align-items: center;
     position: fixed;
     top: 0px;
-    background: black;
+    background: #11111133;
+    backdrop-filter: blur(8px);
     bottom: 0px;
     right: 0px;
     padding: 50px 10px;
-    width: min(75vw, 400px);
+    width: 75vw;
     height: 100vh;
     outline: 0px;
     box-shadow: rgb(2 12 27 / 70%) 0px 10px 30px -10px;
@@ -157,6 +159,73 @@
 
   .navList {
     padding: 0px;
+    padding-left: 40px;
+    margin: 0px;
+    list-style: decimal-leading-zero;
+    width: 100%;
+  }
+
+  .navList > li {
+    position: relative;
+    margin: 0px auto 20px;
+  }
+
+  .navList > li > a {
+    display: inline-block;
+    text-decoration: none;
+    text-decoration-skip-ink: auto;
+    color: inherit;
+    position: relative;
+    transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
+    cursor: pointer;
+    width: 100%;
+    font-size: 1.4rem;
+    padding: 3px 20px 20px;
+  }
+
+  .navList > li::marker {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 400px) and (min-width: 300px) {
+  .logo {
+    margin-left: 2rem;
+  }
+
+  .navButton {
+    color: #1ee0e0;
+    margin-right: 2rem;
+    z-index: 10;
+  }
+
+  .asideDiv {
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    position: fixed;
+    top: 0px;
+    background: #11111133;
+    backdrop-filter: blur(8px);
+    bottom: 0px;
+    right: 0px;
+    padding: 50px 10px;
+    width: 78vw;
+    height: 100vh;
+    outline: 0px;
+    box-shadow: rgb(2 12 27 / 70%) 0px 10px 30px -10px;
+    transform: translateX(0vw);
+    visibility: visible;
+    z-index: 9;
+    opacity: 2;
+    transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
+  }
+
+  .navList {
+    padding-left: 45px;
+    padding-right: 0;
     margin: 0px;
     list-style: decimal-leading-zero;
     width: 100%;
@@ -182,70 +251,5 @@
 
   .navList > li::marker {
     font-size: 0.8rem;
-  }
-}
-
-@media (max-width: 400px) and (min-width: 300px) {
-  .logo {
-    margin-left: 2rem;
-  }
-
-  .navButton {
-    color: #1ee0e0;
-    margin-right: 2rem;
-    z-index: 10;
-  }
-
-  .asideDiv {
-    display: flex;
-    -webkit-box-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    align-items: center;
-    position: fixed;
-    top: 0px;
-    background: black;
-    bottom: 0px;
-    right: 0px;
-    padding: 50px 10px;
-    width: min(75vw, 400px);
-    height: 100vh;
-    outline: 0px;
-    box-shadow: rgb(2 12 27 / 70%) 0px 10px 30px -10px;
-    transform: translateX(0vw);
-    visibility: visible;
-    z-index: 9;
-    opacity: 2;
-    transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
-  }
-
-  .navList {
-    padding-left: 35px;
-    padding-right: 0;
-    margin: 0px;
-    list-style: decimal-leading-zero;
-    width: 100%;
-  }
-
-  .navList > li {
-    position: relative;
-    margin: 0px auto 20px;
-  }
-
-  .navList > li > a {
-    display: inline-block;
-    text-decoration: none;
-    text-decoration-skip-ink: auto;
-    color: inherit;
-    position: relative;
-    transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
-    cursor: pointer;
-    width: 100%;
-    font-size: 1rem;
-    padding: 3px 20px 20px;
-  }
-
-  .navList > li::marker {
-    font-size: 0.7rem;
   }
 }
