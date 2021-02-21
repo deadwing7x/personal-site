@@ -36,7 +36,7 @@ const Experience = () => {
   return (
     <>
       {isMobile ? (
-        <section className={styles.sectionTimeline}>
+        <section id="experience" className={styles.sectionTimeline}>
           <p
             className={`pt-10 text-gray-50 text-5xl pb-4 mb-4 ${styles.experienceText}`}
           >
@@ -65,7 +65,7 @@ const Experience = () => {
           </div>
           <p className={styles.years}>
             <div>
-              <p className="lg:text-2xl sm:text-xl">2021</p>
+              <p className="text-2xl">2021</p>
               <p className="lg:pt-5 lg:text-lg sm:pt-2 sm:text-sm">
                 <strong>Client Project: </strong>Worked closely with other
                 developers, to develop new features on a web app according to
@@ -79,7 +79,7 @@ const Experience = () => {
           </p>
           <p className={styles.years}>
             <div>
-              <p className="lg:text-2xl sm:text-xl">2020</p>
+              <p className="text-2xl">2020</p>
               <ul
                 className={`lg:pt-5 lg:text-lg sm:pt-2 sm:text-sm ${styles.expList}`}
               >
@@ -120,7 +120,7 @@ const Experience = () => {
           </p>
           <p className={styles.years}>
             <div>
-              <p className="lg:text-2xl sm:text-xl">2019</p>
+              <p className="text-2xl">2019</p>
               <p className="lg:pt-5 lg:text-lg sm:pt-2 sm:text-sm">
                 <strong>Client Project: </strong>Collaborated with other
                 developers to develop new features according to client

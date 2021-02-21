@@ -29,6 +29,14 @@ const Navbar: React.FC<{}> = () => {
   };
 
   const showNav = () => {
+    let open: boolean = isOpen;
+
+    if (!open) {
+      document.getElementsByTagName("body")[0].classList.add("stopScroll");
+    } else {
+      document.getElementsByTagName("body")[0].classList.remove("stopScroll");
+    }
+
     setIsOpen(!isOpen);
   };
 
@@ -64,6 +72,7 @@ const Navbar: React.FC<{}> = () => {
           </span>
           {isOpen ? (
             <aside
+              id="asideNav"
               aria-hidden={isOpen}
               tabIndex={isOpen ? 1 : -1}
               className={styles.asideDiv}
