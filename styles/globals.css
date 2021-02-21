@@ -12,4 +12,5 @@ body {
 
 body.stopScroll {
   overflow-y: hidden;
+  height: 100vh;
 }
