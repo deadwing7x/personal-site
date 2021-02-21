@@ -22,7 +22,10 @@ const Projects = () => {
       id="projects"
     >
       <p className={`pt-10 text-gray-50 text-5xl pb-4 ${styles.projectsText}`}>
-        <span className="text-3xl" style={{ color: "#1ee0e0" }}>
+        <span
+          className={`lg:text-3xl sm:text-xl ${styles.number}`}
+          style={{ color: "#1ee0e0" }}
+        >
           02.
         </span>{" "}
         Projects

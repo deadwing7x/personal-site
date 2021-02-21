@@ -9,7 +9,7 @@ const Hero = () => {
     <section className={`lg:ml-24 lg:mr-20 lg:mt-16 sm:ml-20 sm:mr-16 sm:mt-14 ${styles.grid}`}>
       <div className={styles.leftContainer}>
         <p className={`text-2xl sm:text-xl sm:pt-8 ${styles.welcomeText}`}>Welcome I'm</p>
-        <p className="lg:pt-6 text-8xl text-gray-50 font-extrabold w-40 sm:pt-4 sm:text-4xl w-max">
+        <p className={`lg:pt-6 lg:text-8xl text-gray-50 font-extrabold lg:w-40 sm:pt-4 sm:text-4xl sm:w-max ${styles.name}`}>
           {user?.users?.name}
         </p>
         <p className={`pt-6 w-full ${styles.description}`}>

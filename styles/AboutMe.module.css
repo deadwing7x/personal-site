@@ -8,7 +8,7 @@
   width: max-content;
 }
 
-.socialMedia {
+.socialMedia, .languages {
   display: flex;
   -webkit-box-pack: justify;
   -webkit-box-align: center;
@@ -17,10 +17,60 @@
   width: max-content;
 }
 
-.socialMedia > li {
+.socialMedia > li, .languages > li {
   padding: 6px;
 }
 
-.socialMedia > li > a:hover {
+.socialMedia > li > a:hover, .languages > li > a:hover {
   color: #521baa;
+}
+
+@media (max-width: 400px) and (min-width: 300px) {
+  .aboutMeDiv {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-top: 2rem;
+  }
+
+  .aboutMeText {
+    font-size: 1.5rem;
+  }
+
+  .number {
+    font-size: 1rem;
+  }
+
+  .languages {
+    width: 280px;
+    word-break: break-all;
+  }
+
+  .languages > li {
+    padding: 2px;
+  }
+}
+
+@media (max-width: 450px) and (min-width: 400px) {
+  .aboutMeDiv {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-top: 2rem;
+  }
+
+  .aboutMeText {
+    font-size: 1.7rem;
+  }
+
+  .number {
+    font-size: 1.2rem;
+  }
+
+  .languages {
+    width: 380px;
+    word-break: break-all;
+  }
+
+  .languages > li {
+    padding: 3px;
+  }
 }

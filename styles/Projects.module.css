@@ -107,3 +107,49 @@
 .showMoreButton:hover {
   opacity: 1;
 }
+
+@media (max-width: 768px) and (min-width: 450px) {
+  .projectsList {
+    grid-template-columns: repeat(auto-fill, minmax(48%, 1fr));
+  }
+}
+
+@media (max-width: 400px) and (min-width: 300px) {
+  .projectsDiv {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-top: 2rem;
+  }
+
+  .projectsText {
+    font-size: 1.5rem;
+  }
+
+  .number {
+    font-size: 1rem;
+  }
+
+  .projectsList {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 450px) and (min-width: 400px) {
+  .projectsDiv {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-top: 2rem;
+  }
+
+  .projectsText {
+    font-size: 1.7rem;
+  }
+
+  .number {
+    font-size: 1.2rem;
+  }
+
+  .projectsList {
+    grid-template-columns: 1fr;
+  }
+}

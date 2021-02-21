@@ -103,3 +103,30 @@
     height: 160px;
   }
 }
+
+@media (max-width: 450px) {
+  .name {
+    font-size: 1.8rem;
+  }
+
+  .welcomeText {
+    padding-top: 30px;
+    font-size: 1.2rem;
+  }
+
+  .grid {
+    padding-top: 30px;
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
+  .description {
+    color: #a3a8c3;
+    font-size: 1.1rem;
+  }
+
+  .email_link {
+    margin-top: 15px;
+    font-size: 0.8rem;
+  }
+}

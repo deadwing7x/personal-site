@@ -4,7 +4,7 @@ const AboutMe = () => {
   return (
     <section className={`lg:mt-20 lg:ml-24 lg:mr-24 sm:ml-20 sm:mr-16 sm:mt-14 ${styles.aboutMeDiv}`} id="aboutme">
       <p className={`lg:pt-10 text-gray-50 lg:text-5xl pb-4 sm:text-3xl ${styles.aboutMeText}`}>
-        <span className="lg:text-3xl sm:text-xl" style={{ color: "#1ee0e0" }}>
+        <span className={`lg:text-3xl sm:text-xl ${styles.number}`} style={{ color: "#1ee0e0" }}>
           01.
         </span>{" "}
         About Me
@@ -46,7 +46,7 @@ const AboutMe = () => {
       <p className="text-gray-50 pt-12 lg:text-3xl sm:text-xl">
         Some languages and tools that I use:
       </p>
-      <ol className={`mt-5 ${styles.socialMedia}`}>
+      <ol className={`mt-5 ${styles.languages}`}>
         <li>
           <a
             href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"
