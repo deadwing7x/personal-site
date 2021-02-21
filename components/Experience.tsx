@@ -3,7 +3,7 @@ import styles from "../styles/Experience.module.css";
 const Experience = () => {
   return (
     <section
-      className={`mt-20 ml-24 mr-24 ${styles.experienceDiv}`}
+      className={`lg:mt-20 lg:ml-24 lg:mr-24 sm:ml-20 sm:mr-16 sm:mt-14 ${styles.experienceDiv}`}
       id="experience"
     >
       <p
@@ -15,14 +15,24 @@ const Experience = () => {
         Work Experience
       </p>
       <div>
-        <div className='pl-10 pt-10 pb-10'>
-          <p className="text-gray-50 text-3xl">Company: MAQ Software</p>
+        <div className="lg:pl-10 pt-10 pb-10 sm:pl-0">
+          <p className="text-gray-50 lg:text-3xl sm:text-2xl">
+            Company:{" "}
+            <a
+              href="https://maqsoftware.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-50 hover:text-blue-300"
+            >
+              MAQ Software
+            </a>
+          </p>
         </div>
         <div className={`pt-10 ${styles.timeline}`}>
           <div className={`${styles.container} ${styles.left}`}>
-            <div className={styles.content}>
-              <p className="text-2xl">2021</p>
-              <p className="pt-5">
+            <div className={`${styles.content}`}>
+              <p className="lg:text-2xl sm:text-xl">2021</p>
+              <p className="pt-5 sm:pt-2 sm:text-sm">
                 <strong>Client Project: </strong>Worked closely with other
                 developers, to develop new features on a web app according to
                 requirements of the client. Wrote well tested code in C# with
@@ -34,9 +44,9 @@ const Experience = () => {
             </div>
           </div>
           <div className={`${styles.container} ${styles.right}`}>
-            <div className={styles.content}>
-              <p className="text-2xl">2020</p>
-              <ul className={`pt-5 ${styles.expList}`}>
+            <div className={`${styles.content}`}>
+              <p className="lg:text-2xl sm:text-xl">2020</p>
+              <ul className={`pt-5 sm:pt-2 sm:text-sm ${styles.expList}`}>
                 <li>
                   <p>
                     <strong>Internal Project: </strong>Developed a web app from
@@ -73,9 +83,9 @@ const Experience = () => {
             </div>
           </div>
           <div className={`${styles.container} ${styles.left}`}>
-            <div className={styles.content}>
-              <p className="text-2xl">2019</p>
-              <p className="pt-5">
+            <div className={`${styles.content}`}>
+              <p className="lg:text-2xl sm:text-xl">2019</p>
+              <p className="pt-5 sm:pt-2 sm:text-sm">
                 <strong>Client Project: </strong>Collaborated with other
                 developers to develop new features according to client
                 requirements. Wrote well-tested code in C# and Angular JS for an

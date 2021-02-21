@@ -2,20 +2,20 @@ import styles from "../styles/AboutMe.module.css";
 
 const AboutMe = () => {
   return (
-    <section className={`mt-20 ml-24 mr-24 ${styles.aboutMeDiv}`} id="aboutme">
-      <p className={`pt-10 text-gray-50 text-5xl pb-4 ${styles.aboutMeText}`}>
-        <span className="text-3xl" style={{ color: "#1ee0e0" }}>
+    <section className={`lg:mt-20 lg:ml-24 lg:mr-24 sm:ml-20 sm:mr-16 sm:mt-14 ${styles.aboutMeDiv}`} id="aboutme">
+      <p className={`lg:pt-10 text-gray-50 lg:text-5xl pb-4 sm:text-3xl ${styles.aboutMeText}`}>
+        <span className="lg:text-3xl sm:text-xl" style={{ color: "#1ee0e0" }}>
           01.
         </span>{" "}
         About Me
       </p>
-      <p className="text-gray-50 pt-10 text-xl">Hi 👋, I'm Anubhav Sarkar.</p>
-      <p className="text-gray-50 pt-4 text-xl">
+      <p className="text-gray-50 pt-10 lg:text-xl sm:text-lg">Hi 👋, I'm Anubhav Sarkar.</p>
+      <p className="text-gray-50 pt-4 lg:text-xl sm:text-lg">
         I am a full-stack developer based out of Mumbai, IN. I am currently
         focused on full-stack development using .NET with C# and React with
         TypeScript.
       </p>
-      <p className="text-gray-50 pt-12 text-3xl">Connect with me:</p>
+      <p className="text-gray-50 pt-12 lg:text-3xl sm:text-xl">Connect with me:</p>
       <ol className={`mt-5 ${styles.socialMedia}`}>
         <li>
           <a
@@ -43,7 +43,7 @@ const AboutMe = () => {
           </a>
         </li>
       </ol>
-      <p className="text-gray-50 pt-12 text-3xl">
+      <p className="text-gray-50 pt-12 lg:text-3xl sm:text-xl">
         Some languages and tools that I use:
       </p>
       <ol className={`mt-5 ${styles.socialMedia}`}>
@@ -171,20 +171,6 @@ const AboutMe = () => {
           </a>
         </li>
       </ol>
-      <div className="mt-10">
-        <img
-          src={`https://github-readme-stats.vercel.app/api/top-langs?username=deadwing7x&show_icons=true&locale=en&layout=compact`}
-          alt="most-used-languages"
-          aria-label="Most Used Languages"
-        />
-      </div>
-      <div className="mt-10">
-        <img
-          src={`https://github-readme-stats.vercel.app/api?username=deadwing7x&show_icons=true&theme=tokyonight&locale=en`}
-          alt="most-used-languages"
-          aria-label="Most Used Languages"
-        />
-      </div>
     </section>
   );
 };

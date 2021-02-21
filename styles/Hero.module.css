@@ -84,3 +84,22 @@
   position: relative;
   border-radius: 50%;
 }
+
+@media (max-width: 768px) {
+  .leftContainer {
+    order: 2;
+  }
+
+  .rightContainer {
+    order: 1;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .img {
+    width: 160px;
+    height: 160px;
+  }
+}

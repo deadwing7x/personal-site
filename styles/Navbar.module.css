@@ -27,13 +27,17 @@
   align-items: center;
 }
 
+.navlinks_div_mobile {
+  height: 200px;
+}
+
 .nav_links {
   display: flex;
   -webkit-box-pack: justify;
   justify-content: space-between;
   -webkit-box-align: center;
   align-items: center;
-  list-style: bengali;
+  list-style: decimal-leading-zero;
 }
 
 .li_text {
@@ -44,4 +48,5 @@
 .li_text:hover {
   color: #1ee0e0;
   transition: ease-in-out 200ms;
+  border-bottom: 1px solid #1ee0e0;
 }

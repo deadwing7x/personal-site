@@ -18,7 +18,7 @@ const Projects = () => {
 
   return (
     <section
-      className={`mt-20 ml-24 mr-24 ${styles.projectsDiv}`}
+      className={`lg:mt-20 lg:ml-24 lg:mr-24 sm:ml-20 sm:mr-16 sm:mt-14 ${styles.projectsDiv}`}
       id="projects"
     >
       <p className={`pt-10 text-gray-50 text-5xl pb-4 ${styles.projectsText}`}>

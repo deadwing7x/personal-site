@@ -13,7 +13,7 @@
   -webkit-box-pack: justify;
   -webkit-box-align: center;
   align-items: center;
-  background: #8a8888;
+  background: #fffcfc;
   width: max-content;
 }
 
@@ -22,5 +22,5 @@
 }
 
 .socialMedia > li > a:hover {
-  color: #8ef0f0;
+  color: #521baa;
 }
