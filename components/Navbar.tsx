@@ -21,6 +21,8 @@ const Navbar: React.FC<{}> = () => {
   const scrollToComponent = (component: string) => {
     setIsOpen(!isOpen);
 
+    document.getElementsByTagName("body")[0].classList.remove("stopScroll");
+
     document.getElementById(component)?.scrollIntoView({
       behavior: "smooth",
       block: "start",
