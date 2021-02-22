@@ -59,7 +59,11 @@ const AboutMe = () => {
       <p className="text-gray-50 pt-12 pb-12 lg:text-3xl sm:text-xl">
         Grab a copy of my resume:
       </p>
-      <a href="/" download className={styles.resume_link}>
+      <a
+        href="https://github.com/deadwing7x/personal-site/raw/main/public/Anubhav_Resume.pdf"
+        download
+        className={styles.resume_link}
+      >
         Resume
       </a>
       <p className="text-gray-50 pt-12 lg:text-3xl sm:text-xl">
