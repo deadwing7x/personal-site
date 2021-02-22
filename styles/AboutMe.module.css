@@ -8,7 +8,8 @@
   width: max-content;
 }
 
-.socialMedia, .languages {
+.socialMedia,
+.languages {
   display: flex;
   -webkit-box-pack: justify;
   -webkit-box-align: center;
@@ -17,12 +18,61 @@
   width: max-content;
 }
 
-.socialMedia > li, .languages > li {
+.socialMedia > li,
+.languages > li {
   padding: 6px;
 }
 
-.socialMedia > li > a:hover, .languages > li > a:hover {
+.socialMedia > li > a:hover,
+.languages > li > a:hover {
   color: #521baa;
+}
+
+.resume_link {
+  padding: 1rem 1.25rem;
+  background-color: transparent;
+  color: #1ee0e0;
+  border: 2px solid #1ee0e0;
+  border-radius: 1.1rem;
+  font-size: 1rem;
+  font-family: "Space Mono", "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono",
+    monospace;
+  line-height: 1;
+  text-decoration: none;
+  cursor: pointer;
+  opacity: 0.75;
+}
+
+.resume_link:hover {
+  opacity: 1;
+  transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
+}
+
+@media (max-width: 765px) and (min-width: 451px) {
+  .aboutMeDiv {
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+
+  .aboutMeText {
+    border-bottom: 2px solid #1ee0e0;
+    width: max-content;
+    font-size: 1.7rem;
+  }
+
+  .languages {
+    width: 65vw;
+  }
+
+  .resume_link {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 450px) {
+  .languages {
+    width: 90vw;
+  }
 }
 
 @media (max-width: 400px) and (min-width: 300px) {
@@ -40,13 +90,12 @@
     font-size: 1rem;
   }
 
-  .languages {
-    width: 280px;
-    word-break: break-all;
-  }
-
   .languages > li {
     padding: 2px;
+  }
+
+  .resume_link {
+    font-size: 0.8rem;
   }
 }
 
@@ -65,12 +114,11 @@
     font-size: 1.2rem;
   }
 
-  .languages {
-    width: 380px;
-    word-break: break-all;
-  }
-
   .languages > li {
     padding: 3px;
+  }
+
+  .resume_link {
+    font-size: 0.8rem;
   }
 }

@@ -57,17 +57,7 @@
   }
 }
 
-@media (max-width: 768px) and (min-width: 460px) {
-  .logo {
-    margin-left: 2rem;
-  }
-
-  .navButton {
-    color: #1ee0e0;
-    margin-right: 2rem;
-    z-index: 10;
-  }
-
+@media (max-width: 768px) {
   .asideDiv {
     display: flex;
     -webkit-box-pack: center;
@@ -81,6 +71,7 @@
     bottom: 0px;
     right: 0px;
     padding: 50px 10px;
+    text-align: center;
     width: 100vw;
     height: 100vh;
     outline: 0px;
@@ -90,6 +81,18 @@
     z-index: 9;
     opacity: 2;
     transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
+  }
+}
+
+@media (max-width: 768px) and (min-width: 460px) {
+  .logo {
+    margin-left: 2rem;
+  }
+
+  .navButton {
+    color: #1ee0e0;
+    margin-right: 2rem;
+    z-index: 10;
   }
 
   .navList {
@@ -133,30 +136,6 @@
     z-index: 10;
   }
 
-  .asideDiv {
-    display: flex;
-    -webkit-box-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    align-items: center;
-    position: fixed;
-    top: 0px;
-    background: #11111133;
-    backdrop-filter: blur(8px);
-    bottom: 0px;
-    right: 0px;
-    padding: 50px 10px;
-    width: 100vw;
-    height: 100vh;
-    outline: 0px;
-    box-shadow: rgb(2 12 27 / 70%) 0px 10px 30px -10px;
-    transform: translateX(0vw);
-    visibility: visible;
-    z-index: 9;
-    opacity: 2;
-    transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
-  }
-
   .navList {
     padding: 0px;
     padding-left: 40px;
@@ -197,30 +176,6 @@
     color: #1ee0e0;
     margin-right: 2rem;
     z-index: 10;
-  }
-
-  .asideDiv {
-    display: flex;
-    -webkit-box-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    align-items: center;
-    position: fixed;
-    top: 0px;
-    background: #11111133;
-    backdrop-filter: blur(8px);
-    bottom: 0px;
-    right: 0px;
-    padding: 50px 10px;
-    width: 100vw;
-    height: 100vh;
-    outline: 0px;
-    box-shadow: rgb(2 12 27 / 70%) 0px 10px 30px -10px;
-    transform: translateX(0vw);
-    visibility: visible;
-    z-index: 9;
-    opacity: 2;
-    transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
   }
 
   .navList {

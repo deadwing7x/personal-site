@@ -130,3 +130,31 @@
     font-size: 0.8rem;
   }
 }
+
+@media (max-width: 765px) and (min-width: 451px) {
+  .name {
+    font-size: 1.8rem;
+  }
+
+  .welcomeText {
+    padding-top: 30px;
+    font-size: 1.2rem;
+  }
+
+  .grid {
+    padding-top: 30px;
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+
+  .description {
+    color: #a3a8c3;
+    font-size: 1.1rem;
+  }
+
+  .email_link {
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+    font-size: 0.8rem;
+  }
+}

@@ -112,6 +112,10 @@
   .projectsList {
     grid-template-columns: repeat(auto-fill, minmax(48%, 1fr));
   }
+
+  .projectsText {
+    font-size: 1.7rem;
+  }
 }
 
 @media (max-width: 400px) and (min-width: 300px) {
@@ -147,6 +151,17 @@
 
   .number {
     font-size: 1.2rem;
+  }
+
+  .projectsList {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) and (min-width: 451px) {
+  .projectsDiv {
+    margin-left: 2rem;
+    margin-right: 2rem;
   }
 
   .projectsList {

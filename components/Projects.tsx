@@ -11,6 +11,9 @@ const Projects = () => {
   let repos: any = useContext(ReposContext);
 
   repos = repos.repos
+    .filter((x: IRepo) => {
+      return x.name !== "js-calculator";
+    })
     .sort((a: IRepo, b: IRepo) =>
       sortByLastUpdated(new Date(a.updated_at), new Date(b.updated_at))
     )

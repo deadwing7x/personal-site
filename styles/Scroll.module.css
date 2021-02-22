@@ -4,7 +4,7 @@
   cursor: pointer;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .scroll_to_top {
     right: 10px;
   }

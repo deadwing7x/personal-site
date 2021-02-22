@@ -10,7 +10,6 @@ body {
   height: 100%;
 }
 
-body.stopScroll > *:not(div > div > nav > aside) {
+body.stopScroll {
   overflow-y: hidden;
-  height: 100vh;
 }
