@@ -67,11 +67,11 @@ const Navbar: React.FC<{}> = () => {
       </div>
       {isMobile ? (
         <>
-          <span role="button" className={styles.navButton} onClick={showNav}>
+          <button role="button" className={styles.navButton} onClick={showNav}>
             <i
               className={isOpen ? "fas fa-times fa-2x" : "fas fa-bars fa-2x"}
             ></i>
-          </span>
+          </button>
           {isOpen ? (
             <aside
               id="asideNav"
