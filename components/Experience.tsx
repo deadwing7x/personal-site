@@ -24,7 +24,7 @@ const Experience = () => {
 
     window.addEventListener("resize", handleResize);
 
-    if (windowDimensions.width < 500) {
+    if (windowDimensions.width < 768) {
       setIsMobile(true);
     } else {
       setIsMobile(false);
