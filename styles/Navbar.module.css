@@ -19,6 +19,11 @@
   -webkit-box-align: center;
   align-items: center;
   cursor: pointer;
+  outline: none;
+}
+
+.logo:focus {
+  outline: none;
 }
 
 .navlinks_div {
@@ -103,7 +108,7 @@
   .navList {
     padding: 0px;
     margin: 0px;
-    list-style: decimal-leading-zero;
+    list-style: none;
     width: 100%;
   }
 
@@ -146,7 +151,7 @@
     padding: 0px;
     padding-left: 40px;
     margin: 0px;
-    list-style: decimal-leading-zero;
+    list-style: none;
     width: 100%;
   }
 
@@ -189,7 +194,7 @@
     padding-left: 45px;
     padding-right: 0;
     margin: 0px;
-    list-style: decimal-leading-zero;
+    list-style: none;
     width: 100%;
   }
 
