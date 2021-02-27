@@ -8,6 +8,17 @@ body {
   background-color: #120e26;
   width: 100%;
   height: 100%;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body > button,
+a {
+  outline: none;
+}
+
+body > button:focus,
+a:focus {
+  outline: none;
 }
 
 body.stopScroll {
