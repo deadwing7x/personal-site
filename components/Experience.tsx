@@ -44,7 +44,7 @@ const Experience = () => {
               className={`lg:text-3xl sm:text-xl ${styles.number}`}
               style={{ color: "#1ee0e0" }}
             >
-              03.
+              04.
             </span>{" "}
             Work Experience
           </p>
@@ -142,7 +142,7 @@ const Experience = () => {
               className={`lg:text-3xl sm:text-xl ${styles.number}`}
               style={{ color: "#1ee0e0" }}
             >
-              03.
+              04.
             </span>{" "}
             Work Experience
           </p>

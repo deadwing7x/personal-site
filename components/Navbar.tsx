@@ -58,6 +58,13 @@ const Navbar: React.FC<{}> = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, [windowDimensions]);
 
+  const navOptions: { name: string; id: string }[] = [
+    { name: "About", id: "aboutme" },
+    { name: "Projects", id: "projects" },
+    { name: "Blogs", id: "blogs" },
+    { name: "Work Experience", id: "experience" },
+  ];
+
   return (
     <nav id="navHeader" className={`pt-6 ${styles.header}`}>
       <div tabIndex={-1} className={styles.logo}>
@@ -81,30 +88,18 @@ const Navbar: React.FC<{}> = () => {
             >
               <nav>
                 <ol className={styles.navList}>
-                  <li>
-                    <a
-                      className={styles.li_text}
-                      onClick={() => scrollToComponent("aboutme")}
-                    >
-                      About
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      className={styles.li_text}
-                      onClick={() => scrollToComponent("projects")}
-                    >
-                      Projects
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      className={styles.li_text}
-                      onClick={() => scrollToComponent("experience")}
-                    >
-                      Work Experience
-                    </a>
-                  </li>
+                  {navOptions.map((nav, id) => {
+                    return (
+                      <li key={id}>
+                        <a
+                          className={styles.li_text}
+                          onClick={() => scrollToComponent(nav.id)}
+                        >
+                          {nav.name}
+                        </a>
+                      </li>
+                    );
+                  })}
                 </ol>
               </nav>
             </aside>
@@ -115,30 +110,18 @@ const Navbar: React.FC<{}> = () => {
       ) : (
         <div className={`${styles.navlinks_div}`}>
           <ol className={`text-gray-50 ${styles.nav_links}`}>
-            <li className="mx-6">
-              <a
-                className={styles.li_text}
-                onClick={() => scrollToComponent("aboutme")}
-              >
-                About
-              </a>
-            </li>
-            <li className="mx-6">
-              <a
-                className={styles.li_text}
-                onClick={() => scrollToComponent("projects")}
-              >
-                Projects
-              </a>
-            </li>
-            <li className="mx-6">
-              <a
-                className={styles.li_text}
-                onClick={() => scrollToComponent("experience")}
-              >
-                Work Experience
-              </a>
-            </li>
+            {navOptions.map((nav, id) => {
+              return (
+                <li className="mx-6" key={id}>
+                  <a
+                    className={styles.li_text}
+                    onClick={() => scrollToComponent(nav.id)}
+                  >
+                    {nav.name}
+                  </a>
+                </li>
+              );
+            })}
           </ol>
         </div>
       )}

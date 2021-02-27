@@ -39,7 +39,7 @@
 
 .projectInner:hover {
   border: 2px solid #1ee0e0;
-  transition: ease-in-out 400ms;
+  transition: ease-in-out 500ms;
   bottom: 0.5rem;
 }
 

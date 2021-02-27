@@ -3,6 +3,7 @@ import "tailwindcss/tailwind.css";
 import { GetStaticProps, InferGetStaticPropsType } from "next";
 import axios from "axios";
 import Head from "next/head";
+import { GraphQLClient, gql } from "graphql-request";
 
 import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
@@ -15,6 +16,9 @@ import Projects from "../components/Projects";
 import Experience from "../components/Experience";
 import Footer from "../components/Footer";
 import ScrollToTop from "../components/ScrollToTop";
+import { IPost } from "../models/IPost";
+import PostContext from "../context/PostContext";
+import Blogs from "../components/Blogs";
 
 const fetchUser = async () =>
   await axios
@@ -36,14 +40,50 @@ const fetchRepos = async () =>
       repos: [],
     }));
 
+const fetchPosts = async () => {
+  const endpoint: string = "https://api.hashnode.com/";
+  const query: string = gql`
+    {
+      user(username: "deadwing7x") {
+        publication {
+          posts(page: 0) {
+            _id
+            title
+            dateAdded
+            cuid
+            slug
+            coverImage
+          }
+        }
+      }
+    }
+  `;
+
+  const graphQlClient = new GraphQLClient(endpoint, {
+    headers: {
+      Authorization: "b4b4dd91-e469-435b-8702-eae9dc1881e5",
+    },
+  });
+
+  const {
+    user: {
+      publication: { posts },
+    },
+  } = await graphQlClient.request(query);
+
+  return posts;
+};
+
 export const getStaticProps: GetStaticProps = async () => {
   const user: IUser | {} = await fetchUser();
   const repos: IRepo[] | {} = await fetchRepos();
+  const posts: IPost[] = await fetchPosts();
 
   return {
     props: {
       user,
       repos,
+      posts,
     },
   };
 };
@@ -51,38 +91,41 @@ export const getStaticProps: GetStaticProps = async () => {
 const Home = ({
   user,
   repos,
+  posts,
 }: InferGetStaticPropsType<typeof getStaticProps>) => {
   return (
-    <UserContext.Provider value={user}>
-      <ReposContext.Provider value={repos}>
-        <Head>
-          <title>anubhav7x</title>
-          <meta
-            name="viewport"
-            content="initial-scale=1.0, width=device-width"
-          />
-          <script
-            src="https://kit.fontawesome.com/35ac73bd6b.js"
-            crossOrigin="anonymous"
-          ></script>
-          <link
-            rel="stylesheet"
-            href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"
-            integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu"
-            crossOrigin="anonymous"
-          ></link>
-        </Head>
-        <div className="container mx-auto">
-          <Navbar />
-          <Hero />
-          <AboutMe />
-          <Projects />
-          <Experience />
-          <ScrollToTop />
-          <Footer />
-        </div>
-      </ReposContext.Provider>
-    </UserContext.Provider>
+    <>
+      <Head>
+        <title>anubhav7x</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <script
+          src="https://kit.fontawesome.com/35ac73bd6b.js"
+          crossOrigin="anonymous"
+        ></script>
+        <link
+          rel="stylesheet"
+          href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"
+          integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu"
+          crossOrigin="anonymous"
+        ></link>
+      </Head>
+      <UserContext.Provider value={user}>
+        <ReposContext.Provider value={repos}>
+          <PostContext.Provider value={posts}>
+            <div className="container mx-auto">
+              <Navbar />
+              <Hero />
+              <AboutMe />
+              <Projects />
+              <Blogs />
+              <Experience />
+              <ScrollToTop />
+              <Footer />
+            </div>
+          </PostContext.Provider>
+        </ReposContext.Provider>
+      </UserContext.Provider>
+    </>
   );
 };
 

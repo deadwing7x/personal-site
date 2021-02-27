@@ -1,0 +1,85 @@
+.blogsDiv {
+  font-family: "Space Mono", "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono",
+    monospace;
+}
+
+.blogsText {
+  border-bottom: 2px solid #1ee0e0;
+  width: max-content;
+}
+
+.postInner {
+  display: flex;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  border: 2px solid #1ee0e080;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  height: 100%;
+  padding: 0.5rem 0.5rem;
+  transition: all 0.25s ease 0s;
+}
+
+.postInner:hover {
+  border: 2px solid #1ee0e0;
+  transition: ease-in-out 500ms;
+  bottom: 0.25rem;
+}
+
+.postLinks {
+  color: #a3a8c3;
+  display: inline-block;
+  cursor: pointer;
+  text-align: center;
+}
+
+.postLinks:hover {
+  color: #1ee0e0;
+}
+
+@media (max-width: 768px) and (min-width: 450px) {
+  .blogsText {
+    font-size: 1.7rem;
+  }
+}
+
+@media (max-width: 400px) and (min-width: 300px) {
+  .blogsDiv {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-top: 2rem;
+  }
+
+  .blogsText {
+    font-size: 1.5rem;
+  }
+
+  .number {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 450px) and (min-width: 400px) {
+  .blogsDiv {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-top: 2rem;
+  }
+
+  .blogsText {
+    font-size: 1.7rem;
+  }
+
+  .number {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 640px) and (min-width: 451px) {
+  .blogsDiv {
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+}
