@@ -7,6 +7,16 @@ const Blogs = () => {
   const posts: IPost[] = useContext(PostContext);
   const blogLink: string = "https://anubhav7x.hashnode.dev";
 
+  const handleMouseEnter = (id: string) => {
+    const image: HTMLElement | null = document.getElementById(id);
+    image && (image.style.opacity = "1");
+  };
+
+  const handleMouseLeave = (id: string) => {
+    const image: HTMLElement | null = document.getElementById(id);
+    image && (image.style.opacity = "0.6");
+  };
+
   return (
     <section
       className={`lg:mt-20 lg:ml-24 lg:mr-24 sm:ml-20 sm:mr-16 sm:mt-14 ${styles.blogsDiv}`}
@@ -29,11 +39,14 @@ const Blogs = () => {
             <div
               key={post._id}
               className={`rounded-2xl text-gray-50 ${styles.postInner}`}
+              onMouseEnter={() => handleMouseEnter(post.cuid)}
+              onMouseLeave={() => handleMouseLeave(post.cuid)}
             >
               <img
+                id={post.cuid}
                 src={post.coverImage}
                 alt={`Cover Image ${id}`}
-                className="rounded-2xl"
+                className={`rounded-2xl ${styles.imageBlur}`}
               />
               <a
                 href={`${blogLink}/${post.slug}`}
@@ -42,7 +55,9 @@ const Blogs = () => {
               >
                 {post.title}
               </a>
-              <p className='pt-2'>Posted on: {new Date(post.dateAdded).toLocaleDateString()}</p>
+              <p className="pt-2">
+                Posted on: {new Date(post.dateAdded).toLocaleDateString()}
+              </p>
             </div>
           );
         })}

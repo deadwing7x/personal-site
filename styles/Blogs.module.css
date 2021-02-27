@@ -26,6 +26,12 @@
   border: 2px solid #1ee0e0;
   transition: ease-in-out 500ms;
   bottom: 0.25rem;
+  opacity: 1;
+}
+
+.postInner > img {
+  opacity: 0.6;
+  color: #19c9c9;
 }
 
 .postLinks {
