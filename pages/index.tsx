@@ -4,21 +4,24 @@ import { GetStaticProps, InferGetStaticPropsType } from "next";
 import axios from "axios";
 import Head from "next/head";
 import { GraphQLClient, gql } from "graphql-request";
+import dynamic from "next/dynamic";
+
+import { IUser } from "../models/IUser";
+import { IRepo } from "../models/IRepo";
+import { IPost } from "../models/IPost";
+
+import UserContext from "../context/UserContext";
+import ReposContext from "../context/RepoContext";
+import PostContext from "../context/PostContext";
 
 import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
-import { IUser } from "../models/IUser";
-import UserContext from "../context/UserContext";
-import { IRepo } from "../models/IRepo";
-import ReposContext from "../context/RepoContext";
 import AboutMe from "../components/AboutMe";
-import Projects from "../components/Projects";
-import Experience from "../components/Experience";
+const Projects = dynamic(() => import("../components/Projects"));
+const Blogs = dynamic(() => import("../components/Blogs"));
+const Experience = dynamic(() => import("../components/Experience"));
 import Footer from "../components/Footer";
 import ScrollToTop from "../components/ScrollToTop";
-import { IPost } from "../models/IPost";
-import PostContext from "../context/PostContext";
-import Blogs from "../components/Blogs";
 
 const fetchUser = async () =>
   await axios
