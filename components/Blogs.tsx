@@ -42,6 +42,7 @@ const Blogs = () => {
               >
                 {post.title}
               </a>
+              <p className='pt-2'>Posted on: {new Date(post.dateAdded).toLocaleDateString()}</p>
             </div>
           );
         })}
