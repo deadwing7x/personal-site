@@ -101,16 +101,6 @@ const Home = ({
       <Head>
         <title>anubhav7x</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-        <script
-          src="https://kit.fontawesome.com/35ac73bd6b.js"
-          crossOrigin="anonymous"
-        ></script>
-        <link
-          rel="stylesheet"
-          href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"
-          integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu"
-          crossOrigin="anonymous"
-        ></link>
       </Head>
       <UserContext.Provider value={user}>
         <ReposContext.Provider value={repos}>

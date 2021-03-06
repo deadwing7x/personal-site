@@ -2,6 +2,7 @@ import { useContext } from "react";
 import ReposContext from "../context/RepoContext";
 import { IRepo } from "../models/IRepo";
 import styles from "../styles/Projects.module.css";
+import { GoLinkExternal, GoMarkGithub } from "react-icons/go";
 
 const Projects = () => {
   const sortByLastUpdated = (a: Date, b: Date) => {
@@ -40,16 +41,13 @@ const Projects = () => {
               <div className={styles.projectInner}>
                 <header>
                   <div className={`${styles.projectTop}`}>
-                    <div className="text-gray-50">
-                      <i className="far fa-folder fa-2x"></i>
-                    </div>
                     <div className={`text-gray-50 ${styles.projectLinks}`}>
                       <a
                         href={repo.html_url}
                         target="_blank"
                         rel="noopener noreferrer"
                       >
-                        <i className="fab fa-github"></i>
+                        <GoMarkGithub />
                       </a>
                       {repo.homepage ? (
                         <a
@@ -57,7 +55,7 @@ const Projects = () => {
                           target="_blank"
                           rel="noopener noreferrer"
                         >
-                          <i className="fas fa-external-link-alt"></i>
+                          <GoLinkExternal />
                         </a>
                       ) : (
                         ""
