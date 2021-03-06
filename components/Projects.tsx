@@ -46,6 +46,7 @@ const Projects = () => {
                         href={repo.html_url}
                         target="_blank"
                         rel="noopener noreferrer"
+                        className={styles.linkIcons}
                       >
                         <GoMarkGithub />
                       </a>
@@ -54,6 +55,7 @@ const Projects = () => {
                           href={repo.homepage}
                           target="_blank"
                           rel="noopener noreferrer"
+                          className={styles.linkIcons}
                         >
                           <GoLinkExternal />
                         </a>
