@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import styles from "../styles/Scroll.module.css";
+import { BsChevronDoubleUp } from "react-icons/bs";
 
 const ScrollToTop: React.FC<{}> = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -23,10 +24,10 @@ const ScrollToTop: React.FC<{}> = () => {
   }, []);
 
   return (
-    <div className='flex justify-end'>
+    <div className="flex justify-end">
       {isVisible && (
         <div className={`${styles.scroll_to_top}`} onClick={scrollToTop}>
-          <i className="text-gray-50 fas fa-arrow-alt-circle-up fa-2x"></i>
+          <BsChevronDoubleUp />
         </div>
       )}
     </div>
