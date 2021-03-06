@@ -1,4 +1,6 @@
+import React from "react";
 import styles from "../styles/AboutMe.module.css";
+import { FaLinkedin, FaGithub, FaDev } from "react-icons/fa";
 
 const AboutMe = () => {
   const languages: string[] = [
@@ -47,24 +49,26 @@ const AboutMe = () => {
             href="https://www.linkedin.com/in/anubhav-sarkar-52965786/"
             rel="noopener noreferrer"
           >
-            <i aria-hidden className="fab fa-linkedin-in fa-2x"></i>
+            <FaLinkedin
+              className={styles.socialMediaIcons}
+              title={"Anubhav Sarkar's LinkedIn profile"}
+            />
           </a>
         </li>
         <li>
           <a href="https://github.com/deadwing7x" rel="noopener noreferrer">
-            <i
-              aria-hidden
-              className="fab fa-github fa-2x"
-              title="deadwing7x's GitHub Profile"
-            ></i>
+            <FaGithub
+              className={styles.socialMediaIcons}
+              title={"deadwing7x's GitHub Profile"}
+            />
           </a>
         </li>
         <li>
           <a href="https://dev.to/deadwing7x" rel="noopener noreferrer">
-            <i
-              className="fab fa-dev fa-2x"
-              title="deadwing7x's DEV Community Profile"
-            ></i>
+            <FaDev
+              className={styles.socialMediaIcons}
+              title={"deadwing7x's DEV Community Profile"}
+            />
           </a>
         </li>
       </ol>

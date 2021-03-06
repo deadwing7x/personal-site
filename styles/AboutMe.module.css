@@ -13,8 +13,12 @@
   -webkit-box-pack: justify;
   -webkit-box-align: center;
   align-items: center;
-  background: #fffcfc;
+  background: #ffffffbb;
   width: max-content;
+}
+
+.socialMediaIcons {
+  font-size: 2rem;
 }
 
 .socialMedia > li {
@@ -22,7 +26,7 @@
 }
 
 .socialMedia > li > a:hover {
-  color: #521baa;
+  color: #612abb;
 }
 
 .resume_link {
