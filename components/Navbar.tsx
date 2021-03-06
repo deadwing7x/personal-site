@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import styles from "../styles/Navbar.module.css";
+import Image from "next/image";
+import { FaStream, FaTimes } from "react-icons/fa";
 
 const getWindowDimensions = () => {
   if (typeof window !== "undefined") {
@@ -68,16 +70,24 @@ const Navbar: React.FC<{}> = () => {
   return (
     <nav id="navHeader" className={`pt-6 ${styles.header}`}>
       <div tabIndex={-1} className={styles.logo}>
-        <a className="text-xl text-gray-50" href="/" aria-label="Home">
-          Home
+        <a href="/" aria-label="Home">
+          <Image
+            className={styles.logoImage}
+            src="/../public/anubhav7x.gif"
+            alt="Logo"
+            width={50}
+            height={50}
+          />
         </a>
       </div>
       {isMobile ? (
         <>
           <button role="button" className={styles.navButton} onClick={showNav}>
-            <i
-              className={isOpen ? "fas fa-times fa-2x" : "fas fa-bars fa-2x"}
-            ></i>
+            {isOpen ? (
+              <FaTimes className={styles.navIcon} />
+            ) : (
+              <FaStream className={styles.navIcon} />
+            )}
           </button>
           {isOpen ? (
             <aside
