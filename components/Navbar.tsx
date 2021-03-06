@@ -73,7 +73,7 @@ const Navbar: React.FC<{}> = () => {
         <a href="/" aria-label="Home">
           <Image
             className={styles.logoImage}
-            src="/../public/anubhav7x.gif"
+            src="/anubhav7x.gif"
             alt="Logo"
             width={50}
             height={50}
