@@ -62,6 +62,16 @@ const Blogs = () => {
           );
         })}
       </div>
+      <div className="mt-14 text-center">
+        <a
+          className={styles.showMoreButton}
+          href="https://anubhav7x.hashnode.dev/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Show More
+        </a>
+      </div>
     </section>
   );
 };
