@@ -1,3 +1,5 @@
+import { FaHeart } from "react-icons/fa";
+
 const Footer: React.FC<{}> = () => {
   const date: Date = new Date();
   const year = date.getFullYear();
@@ -7,7 +9,7 @@ const Footer: React.FC<{}> = () => {
       <div className="copyright-text">
         Copyright © {year}
         <p>
-          Designed with <i className="fa fa-heart"></i> by Anubhav
+          Designed with <FaHeart style={{ fontSize: "1.5rem" }} /> by Anubhav
         </p>
       </div>
     </div>
