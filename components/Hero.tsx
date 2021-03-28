@@ -1,8 +1,8 @@
-import { useContext } from "react";
+import React, { useContext } from "react";
 import UserContext from "../context/UserContext";
 import styles from "../styles/Hero.module.css";
 
-const Hero = () => {
+const Hero: React.FC<{}> = () => {
   const user: any = useContext(UserContext);
 
   return (

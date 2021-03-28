@@ -2,7 +2,7 @@ import React from "react";
 import styles from "../styles/AboutMe.module.css";
 import { FaLinkedin, FaGithub, FaDev } from "react-icons/fa";
 
-const AboutMe = () => {
+const AboutMe: React.FC<{}> = () => {
   const languages: string[] = [
     "HTML & CSS",
     "JavaScript (ES6+)",

@@ -3,7 +3,7 @@ import PostContext from "../context/PostContext";
 import { IPost } from "../models/IPost";
 import styles from "../styles/Blogs.module.css";
 
-const Blogs = () => {
+const Blogs: React.FC<{}> = () => {
   const posts: IPost[] = useContext(PostContext);
   const blogLink: string = "https://anubhav7x.hashnode.dev";
 

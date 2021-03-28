@@ -1,10 +1,10 @@
-import { useContext } from "react";
+import React, { useContext } from "react";
 import ReposContext from "../context/RepoContext";
 import { IRepo } from "../models/IRepo";
 import styles from "../styles/Projects.module.css";
 import { GoLinkExternal, GoMarkGithub } from "react-icons/go";
 
-const Projects = () => {
+const Projects: React.FC<{}> = () => {
   const sortByLastUpdated = (a: Date, b: Date) => {
     return b.getTime() - a.getTime();
   };

@@ -11,7 +11,7 @@ const getWindowDimensions = () => {
   }
 };
 
-const Experience = () => {
+const Experience: React.FC<{}> = () => {
   const [isMobile, setIsMobile] = useState<boolean>(false);
   const [windowDimensions, setWindowDimensions] = useState<any>(
     getWindowDimensions()
