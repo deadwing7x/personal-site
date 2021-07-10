@@ -22,6 +22,7 @@ const Blogs = dynamic(() => import("../components/Blogs"));
 const Experience = dynamic(() => import("../components/Experience"));
 import Footer from "../components/Footer";
 import ScrollToTop from "../components/ScrollToTop";
+import Playlist from "../components/Playlist";
 
 const fetchUser = async () =>
   await axios
@@ -108,6 +109,7 @@ const Home = ({
             <div className="container mx-auto">
               <Navbar />
               <Hero />
+              <Playlist />
               <AboutMe />
               <Projects />
               <Blogs />
