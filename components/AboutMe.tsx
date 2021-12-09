@@ -76,7 +76,7 @@ const AboutMe: React.FC<{}> = () => {
         Grab a copy of my resume:
       </p>
       <a
-        href="https://github.com/deadwing7x/personal-site/raw/main/public/Anubhav_Resume.pdf"
+        href="https://github.com/deadwing7x/personal-site/raw/main/public/Anubhav_Resume"
         download
         className={styles.resume_link}
       >
