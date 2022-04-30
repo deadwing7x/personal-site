@@ -20,7 +20,7 @@ export const ExperienceList: ExperienceType[] = [
           `Working on Microsoft Fraud Protection Tools to minimize 
           fraudulent activities across all Microsoft Line of Business.
           Successfully migrated legacy code base from .NET framework 4.7.1 to .NET 6.
-          Working on migrating the old monolithic architecture to a more modern micro-services approach.`,
+          Redesigned application from monolithic to micro-services architecture`,
         ],
       },
       {
