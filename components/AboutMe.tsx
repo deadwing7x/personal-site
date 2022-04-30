@@ -46,7 +46,7 @@ const AboutMe: React.FC<{}> = () => {
       <ol className={`mt-5 ${styles.socialMedia}`}>
         <li>
           <a
-            href="https://www.linkedin.com/in/anubhav-sarkar-52965786/"
+            href="https://www.linkedin.com/in/anubhav-sarkar17/"
             rel="noopener noreferrer"
           >
             <FaLinkedin
