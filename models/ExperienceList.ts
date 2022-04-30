@@ -11,6 +11,29 @@ export type ExperienceDescription = {
 
 export const ExperienceList: ExperienceType[] = [
   {
+    Company: "Pactera EDGE",
+    Website: "https://www.pacteraedge.com/",
+    Experience: [
+      {
+        Year: "2022",
+        Description: [
+          `Working on Microsoft Fraud Protection Tools to minimize 
+          fraudulent activities across all Microsoft Line of Business.
+          Successfully migrated legacy code base from .NET framework 4.7.1 to .NET 6.
+          Working on migrating the old monolithic architecture to a more modern micro-services approach.`,
+        ],
+      },
+      {
+        Year: "2021",
+        Description: [
+          `Working on Microsoft Fraud Protection Tools to minimize 
+          fraudulent activities across all Microsoft Line of Business.
+          Successfully migrated legacy code base from .NET framework 4.7.1 to .NET 6.`,
+        ],
+      },
+    ],
+  },
+  {
     Company: "MAQ Software",
     Website: "https://maqsoftware.com",
     Experience: [
@@ -60,7 +83,7 @@ export const ExperienceList: ExperienceType[] = [
           `Collaborated with other
           developers to develop new features according to client
           requirements. Wrote well-tested code in C# and Angular JS
-          for an ASP.NET Framwork Web App.`,
+          for an ASP.NET Framework Web App.`,
         ],
       },
     ],
