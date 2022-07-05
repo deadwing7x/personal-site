@@ -36,7 +36,7 @@ const AboutMe: React.FC<{}> = () => {
         Hi 👋, I'm Anubhav Sarkar.
       </p>
       <p className="text-gray-50 pt-4 lg:text-xl sm:text-lg">
-        I am a full-stack developer based out of Mumbai, IN. I am currently
+        I am a full-stack developer based out of New Delhi, IN. I am currently
         focused on full-stack development using .NET with C# and React with
         TypeScript.
       </p>

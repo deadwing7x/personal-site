@@ -11,6 +11,22 @@ export type ExperienceDescription = {
 
 export const ExperienceList: ExperienceType[] = [
   {
+    Company: "Microsoft",
+    Website: "https://www.microsoft.com/",
+    Experience: [
+      {
+        Year: "2022",
+        Description: [
+          `Working on Microsoft Fraud Protection Tools to minimize 
+          fraudulent activities across all Microsoft Line of Business.
+          Developing micro-services and resdesigning architecture to improve the
+          performance of the application. Working on adding various new features to help users minimize fraud
+          all over Microsoft Commerce Ecosystem.`,
+        ],
+      },
+    ],
+  },
+  {
     Company: "Pactera EDGE",
     Website: "https://www.pacteraedge.com/",
     Experience: [
